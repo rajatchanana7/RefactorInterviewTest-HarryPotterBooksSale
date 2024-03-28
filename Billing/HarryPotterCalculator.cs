@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Billing
 {
@@ -75,8 +74,6 @@ namespace Billing
 
             var x1 = "Description\t\t\t\t\tQuantity\tPrice\r\n";
             fs.Write(Encoding.ASCII.GetBytes(x1), 0, Encoding.ASCII.GetBytes(x1).Length);
-
-            int i = 0;
             for(var n = 1; n <= 5; ++n)
             {
                 if (minBooks[n] > 0)
@@ -190,35 +187,35 @@ namespace Billing
             int countBought = 0;
             if (book1 > 0)
             {
-                --book1;
+                //--book1;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book2 > 0)
             {
-                --book2;
+               // --book2;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book3 > 0)
             {
-                --book3;
+               // --book3;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book4 > 0)
             {
-                --book4;
+               // --book4;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book5 > 0)
             {
-                --book5;
+               // --book5;
                 ++countBought;
             }
             if (countBought == N) goto END;
