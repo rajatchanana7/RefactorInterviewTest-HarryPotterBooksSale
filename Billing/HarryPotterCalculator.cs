@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Billing
 {
@@ -75,8 +74,6 @@ namespace Billing
 
             var x1 = "Description\t\t\t\t\tQuantity\tPrice\r\n";
             fs.Write(Encoding.ASCII.GetBytes(x1), 0, Encoding.ASCII.GetBytes(x1).Length);
-
-            int i = 0;
             for(var n = 1; n <= 5; ++n)
             {
                 if (minBooks[n] > 0)
@@ -179,46 +176,44 @@ namespace Billing
         
         private static bool CanBuyHarryPotter(int book1, int book2, int book3, int book4, int book5, int N)
         {
-            // We can convert this to if else instead of if eerywher as this will run for only one type of book each time so we can use if else instead of if only.
-
             if (N > 5) return false;
-            if (N == 4 && book1 != 0)
-            {
+            //if (N == 4 && book1 != 0)
+            //{
 
-            }
+            //}
 
             int countBought = 0;
             if (book1 > 0)
             {
-                --book1;
+                //--book1;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book2 > 0)
             {
-                --book2;
+               // --book2;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book3 > 0)
             {
-                --book3;
+               // --book3;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book4 > 0)
             {
-                --book4;
+               // --book4;
                 ++countBought;
             }
             if (countBought == N) goto END;
 
             if (book5 > 0)
             {
-                --book5;
+               // --book5;
                 ++countBought;
             }
             if (countBought == N) goto END;
@@ -231,7 +226,6 @@ namespace Billing
         private static void BuyHarryPotter(ref int book1, ref int book2, ref int book3, ref int book4, ref int book5, int N)
         {
 
-            // Check the usage of this method , I dont this this is required.
             if (N == 0 || N > 5) return;
 
             var x = new[] { new { c = book1, id = 1 }, new { c = book2, id = 2 }, new { c = book3, id = 3 }, new { c = book4, id = 4 }, new { c = book5, id = 5 } }

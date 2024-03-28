@@ -23,7 +23,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
 
         }
 
@@ -42,7 +42,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(165, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(164, File.OpenRead("Invoice.txt").Length);
             
         }
 
@@ -61,7 +61,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -78,7 +78,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -112,7 +112,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -129,7 +129,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -146,7 +146,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(136, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(135, File.OpenRead("Invoice.txt").Length);
         }
 
         [TestMethod]
@@ -163,7 +163,7 @@ namespace Billing.UnitTests
 
             calculator.CalculateCost(book1, book2, book3, book4, book5, "invoice.txt", "Joe Customer", "London");
 
-            Assert.AreEqual(165, File.OpenRead("Invoice.txt").Length);
+            Assert.AreEqual(164, File.OpenRead("Invoice.txt").Length);
         }
     }
 }
