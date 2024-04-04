@@ -177,5 +177,22 @@ namespace BooksSales.UnitTests
 
             Assert.AreEqual(150m, calculateDiscount.CalculatedPrice);
         }
+
+        [TestMethod]
+        public void Buy25BooksTestWithNegativeValue()
+        {
+            CalculateDiscount calculateDiscount = new CalculateDiscount();
+
+
+            calculateDiscount.AddBooks(BooksNameEnum.FirstBook, -5);
+            calculateDiscount.AddBooks(BooksNameEnum.SecondBook, 5);
+            calculateDiscount.AddBooks(BooksNameEnum.ThirdBook, 5);
+            calculateDiscount.AddBooks(BooksNameEnum.FourthBook, 5);
+            calculateDiscount.AddBooks(BooksNameEnum.FifthBook, 5);
+
+            Assert.AreEqual(128m, calculateDiscount.CalculatedPrice);
+        }
+
+      
     }
 }

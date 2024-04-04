@@ -2,7 +2,7 @@
 
 namespace BooksSale.IApplication
 {
-    internal interface IBookSet
+    public interface IBookSet
     {
         bool BookExists(Book book);
         void AddBookInBookSet(Book book);

@@ -1,4 +1,5 @@
 ﻿using BooksSale.CommonEnum;
+using BooksSale.IApplication;
 using BooksSale.Models;
 
 namespace BooksSale.Application
@@ -9,7 +10,6 @@ namespace BooksSale.Application
     public class CalculateDiscount
     {
         private readonly List<BooksSet> bookSets = new List<BooksSet>();
-
         public decimal CalculatedPrice
         {
             get
