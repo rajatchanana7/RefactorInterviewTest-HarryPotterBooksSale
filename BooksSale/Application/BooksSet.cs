@@ -1,8 +1,9 @@
-﻿using BooksSale.Models;
+﻿using BooksSale.IApplication;
+using BooksSale.Models;
 
 namespace BooksSale.Application
 {
-    internal class BooksSet
+    internal class BooksSet: IBookSet
     {
         private readonly List<Book> books= new List<Book>();
         private readonly BooksDiscount discount= new BooksDiscount();
