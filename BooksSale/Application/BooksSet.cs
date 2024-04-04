@@ -1,5 +1,4 @@
-﻿using BooksSale.CommonEnum;
-using BooksSale.Models;
+﻿using BooksSale.Models;
 
 namespace BooksSale.Application
 {
@@ -19,29 +18,17 @@ namespace BooksSale.Application
 
         public bool BookExists(Book book)
         {
-            return books.Exists(a=> a.BooksQuantity == book.BooksQuantity);
+            return books.Exists(a=> a.BooksName == book.BooksName);
         }
 
-        public void AddBook(Book book)
+        public void AddBookInBookSet(Book book)
         {
             books.Add(book);
         }
 
-        public void RemoveBook(Book book) { 
+        public void RemoveBookFromBookSet(Book book) { 
         
             books.Remove(book);
-        }
-
-        public string GetBookSet()
-        {
-            string? bookSet = null;
-            foreach (BooksNameEnum booksName in  Enum.GetValues(typeof(BooksNameEnum)))
-            {
-                string bookExists= books.Exists(a=> a.BooksQuantity== booksName) ?"1":"0";
-                bookSet = bookSet == null ? bookExists : $"{bookSet}, {bookExists}";
-            }
-
-            return bookSet;
         }
 
     }

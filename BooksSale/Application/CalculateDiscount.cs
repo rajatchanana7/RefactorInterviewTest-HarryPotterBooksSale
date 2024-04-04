@@ -1,10 +1,5 @@
 ﻿using BooksSale.CommonEnum;
 using BooksSale.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BooksSale.Application
 {
@@ -29,11 +24,11 @@ namespace BooksSale.Application
 
             if (availableBookSet !=null && availableBookSet.Count()>0)
             {
-                MaximumDiscountedBookSet(availableBookSet, book).AddBook(book);
+                MaximumDiscountedBookSet(availableBookSet, book).AddBookInBookSet(book);
             } else
             {
                 var newBookSet = new BooksSet();
-                newBookSet.AddBook(book);
+                newBookSet.AddBookInBookSet(book);
                 bookSets.Add(newBookSet);
             }
         }
@@ -46,25 +41,6 @@ namespace BooksSale.Application
             }
         }
 
-        //public void AddBooks(List<Book> books)
-        //{
-        //    foreach (var book in books)
-        //    {
-        //        AddBook(book);
-        //    }
-        //}
-
-        public string GetBookSets()
-        {
-            string? showBookSet = null;
-            foreach (var item in bookSets)
-            {
-                showBookSet = showBookSet + item.GetBookSet() + Environment.NewLine;
-            }
-
-            return showBookSet;
-        }
-
 
         private BooksSet MaximumDiscountedBookSet(IEnumerable<BooksSet> bookSets, Book book) {
             BooksSet? bestBookSet = null;
@@ -72,20 +48,15 @@ namespace BooksSale.Application
 
             foreach (var bookSet in bookSets)
             {
-                bookSet.AddBook(book);
+                bookSet.AddBookInBookSet(book);
                 if (CalculatedPrice < price)
                 {
                     price= CalculatedPrice;
                     bestBookSet= bookSet;
                 }
-                bookSet.RemoveBook(book);
+                bookSet.RemoveBookFromBookSet(book);
             }
-
             return bestBookSet;
-        
         }
-
-
-
     }
 }
